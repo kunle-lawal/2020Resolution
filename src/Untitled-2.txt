@@ -1,0 +1,77 @@
+nav {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: auto;
+            height: 100%;
+            background-color: inherit;
+            box-shadow: initial;
+
+            .hamburger {
+                // background-color: #222;
+                display: inline-block;
+                position: relative;
+                cursor: pointer;
+                z-index: 99;
+
+                .patty {
+                    background-color: #222;
+                    position: relative;
+                    top: 0;
+                    margin: auto;
+                    height: 5px;
+                    width: 30px;
+                    margin: 5px;
+                    display: block;
+                    transition: all 0.3s ease-in;
+                }
+
+                h4 {
+                    font-weight: 600;
+                }
+            }
+
+            .hamburger.opened {
+                .patty {
+                    position: relative;
+                    background-color: #fff;
+                    right: 10px;
+                    top: 0px;
+
+                    h4 {
+                        color: white;
+                    }
+
+                    &:nth-child(1) {
+                        transform: rotateZ(45deg);
+                        top: 10px;
+                    }
+
+                    &:nth-child(2) {
+                        transform: rotateZ(-45deg);
+                    }
+
+                    &:nth-child(3) {
+                        top: -10px;
+                        transform: rotateZ(45deg);
+                    }
+                }
+            }
+
+            .fullNav {
+                height: 100%;
+                width: 400px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: -410px;
+                margin: auto;
+                background: #222;
+                padding: 20px;
+                transition: right 0.5s;
+            }
+
+            .fullNav.show {
+                right: 0;
+            }
+        }

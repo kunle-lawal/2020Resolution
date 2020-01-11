@@ -1,0 +1,170 @@
+@import 'reset.scss';
+@import 'global.scss';
+
+.main_page {
+    .userProfileContainer {
+        background: #fffdf7;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .userProfile {
+            min-height: 700px;
+            min-width: 500px;
+            width: 40%;
+            max-width: 650px;
+            margin: auto;
+            box-shadow: 1px 1px 3px #8e8e8e;
+            overflow: auto;
+
+            @include screen-size(small) {
+                width: 100%;
+                overflow: hidden;
+                max-height: initial;
+                min-width: initial;
+            }
+
+            @include screen-size(kindasmall) {
+                width: 100%;
+                min-width: initial;
+            }
+
+            @include screen-size(large) {
+                max-height: 750px;
+            }
+
+            @include screen-size(xlarge) {
+                max-height: 750px;
+            }
+
+            .header {
+                height: 300px;
+                width: 100%;
+                background-color: #e8c650;
+            }
+
+            .userInfo {
+                position: relative;
+                top: -75px;
+                .user {
+                    .userProfilePicture {
+                        // border-radius: 100%;
+                        // border: 7px solid #fff;
+                        // background-color: #fff;
+                        // padding: 40px;
+                        // display: inline-block;
+
+                        border-radius: 100%;
+                        border: 7px solid #f9f9f9;
+                        box-shadow: 1px 1px 5px #a5a5a5;
+                        background-color: #fff;
+                        padding: 40px;
+                        display: inline-block;
+                        min-height: 100px;
+                        min-width: 100px;
+                        margin-bottom: 30px;
+                        height: 150px;
+                        width: 150px;
+
+                        img {
+                            height: 100px;
+                            position: absolute;
+                            opacity: 0;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                            top: 0;
+                            bottom: 0;
+
+                            &:active {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .resolution_container {
+                width: 100%;
+
+                .userResolutions {
+                    width: 80%;
+                    min-height: 75px;
+                    margin: 30px auto;
+                    // display: grid;
+                    // grid-template-columns: 1fr 4fr;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: end;
+                    padding: 10px;
+
+                    @include screen-size(small) {
+                        width: 95%;
+                    }
+
+                    @include screen-size(kindasmall) {
+                        width: 95%;
+                    }
+
+                    * {
+                        margin: 0 5px;
+                    }
+
+                    .number {
+                        max-height: 100px;
+                        width: 10%;
+                        border-top: 5px solid #e8c650;
+                        display: flex;
+                        justify-content: center;
+
+                        h4 {
+                            // border: 1px solid;
+                            padding: 5px;
+                            font-size: 15px;
+                            font-weight: 900;
+                            font-family: $quicksand;
+                        }
+                    }
+
+                    .userResolution {
+                        // border: 1px solid;
+                        padding: 2px;
+                        width: 80%;
+                        text-align: left;
+                        background-color: #e8c650;
+                        padding: 10px;
+
+                        p {
+                            // font-size: 15px;
+                            font-weight: 900;
+                            font-family: $quicksand;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #2220;
+    color: white;
+    padding: 10px;
+
+    h4 {
+        color: #222;
+    }
+}

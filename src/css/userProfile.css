@@ -1,0 +1,406 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Lato:900");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=reset.css.map */
+/* COLOR PALLET */
+/* MEDIA QUERY BREAK POINTS */
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  color: white;
+}
+
+button {
+  font-family: "Quicksand", sans-serif;
+}
+
+.button-input {
+  transition: opacity 0.2s;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+/*Main Font-sizes*/
+/*FONTS*/
+label {
+  font-family: "Quicksand", sans-serif;
+  width: initial !important;
+}
+
+.lato {
+  font-family: "Lato", sans-serif;
+}
+
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+}
+
+.logo {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
+}
+
+h1 {
+  font-size: 45px;
+  line-height: 50px;
+  font-family: "Lato", sans-serif;
+}
+@media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 28.125px;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1257px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 33px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+@media only screen and (max-width: 700px) {
+  h2 {
+    font-size: 24px;
+    line-height: 19px;
+  }
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 35px;
+  font-family: "Quicksand", sans-serif;
+}
+@media only screen and (max-width: 700px) {
+  h3 {
+    font-size: 17.6470588235px;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1257px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+
+h4 {
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "Quicksand", sans-serif;
+  color: #222222;
+}
+
+p {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  color: #314455;
+}
+@media only screen and (max-width: 700px) {
+  p {
+    font-size: 14px;
+  }
+}
+
+.display_none {
+  display: none !important;
+}
+
+.main_page .userProfileContainer {
+  background: #fffdf7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.main_page .userProfileContainer .userProfile {
+  min-height: 700px;
+  min-width: 500px;
+  width: 40%;
+  max-width: 650px;
+  margin: auto;
+  box-shadow: 1px 1px 3px #8e8e8e;
+  overflow: auto;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .userProfileContainer .userProfile {
+    width: 100%;
+    overflow: hidden;
+    max-height: initial;
+    min-width: initial;
+  }
+}
+@media screen and (min-width: 1259px) and (max-width: 1440px) {
+  .main_page .userProfileContainer .userProfile {
+    max-height: 750px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .main_page .userProfileContainer .userProfile {
+    max-height: 750px;
+  }
+}
+.main_page .userProfileContainer .userProfile .header {
+  height: 300px;
+  width: 100%;
+  background-color: #e8c650;
+}
+.main_page .userProfileContainer .userProfile .userInfo {
+  position: relative;
+  top: -75px;
+}
+.main_page .userProfileContainer .userProfile .userInfo .user .userProfilePicture {
+  border-radius: 100%;
+  border: 7px solid #f9f9f9;
+  box-shadow: 1px 1px 5px #a5a5a5;
+  background-color: #fff;
+  padding: 40px;
+  display: inline-block;
+  min-height: 100px;
+  min-width: 100px;
+  margin-bottom: 30px;
+  height: 150px;
+  width: 150px;
+}
+.main_page .userProfileContainer .userProfile .userInfo .user .userProfilePicture img {
+  height: 100px;
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+}
+.main_page .userProfileContainer .userProfile .userInfo .user .userProfilePicture img:active {
+  opacity: 1;
+}
+.main_page .userProfileContainer .userProfile .resolution_container {
+  width: 100%;
+}
+.main_page .userProfileContainer .userProfile .resolution_container .userResolutions {
+  width: 80%;
+  min-height: 75px;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: end;
+  padding: 10px;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .userProfileContainer .userProfile .resolution_container .userResolutions {
+    width: 95%;
+  }
+}
+.main_page .userProfileContainer .userProfile .resolution_container .userResolutions * {
+  margin: 0 5px;
+}
+.main_page .userProfileContainer .userProfile .resolution_container .userResolutions .number {
+  max-height: 100px;
+  width: 10%;
+  border-top: 5px solid #e8c650;
+  display: flex;
+  justify-content: center;
+}
+.main_page .userProfileContainer .userProfile .resolution_container .userResolutions .number h4 {
+  padding: 5px;
+  font-size: 15px;
+  font-weight: 900;
+  font-family: "Quicksand", sans-serif;
+}
+.main_page .userProfileContainer .userProfile .resolution_container .userResolutions .userResolution {
+  padding: 2px;
+  width: 80%;
+  text-align: left;
+  background-color: #e8c650;
+  padding: 10px;
+}
+.main_page .userProfileContainer .userProfile .resolution_container .userResolutions .userResolution p {
+  font-weight: 900;
+  font-family: "Quicksand", sans-serif;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #2220;
+  color: white;
+  padding: 10px;
+}
+footer h4 {
+  color: #222;
+}
+
+/*# sourceMappingURL=userProfile.css.map */

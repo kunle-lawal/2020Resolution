@@ -1,0 +1,391 @@
+@import "reset.scss";
+@import "global.scss";
+
+body {
+    overflow-x: hidden;
+}
+
+.main_container {
+    text-align: center;
+
+    .main_page {
+        width: 90%;
+        text-align: center;
+        display: inline-block;
+        margin-top: 200px;
+
+        @include screen-size(small) {
+            width: 100%;
+        }
+
+        .share {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: auto;
+            height: auto;
+            background-color: inherit;
+            box-shadow: initial;
+            // border: 1px solid red;
+
+            &:hover > .shareIcons {
+                transform: initial;
+                top: 100%;
+                @include screen-size(small) {
+                }
+                .icon {
+                    opacity: 1;
+                    padding: 10px 0;
+                    // top: 40px;
+                    // border: 1px solid red;
+                    // position: relative;
+                    &:nth-child(1) {
+                        // right: 80px;
+                        top: 0px;
+                        @include screen-size(small) {
+                            right: initial;
+                            top: initial;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        // right: 120px;
+                        top: 100%;
+                        @include screen-size(small) {
+                            right: initial;
+                            top: initial;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        // right: 40px;
+                        top: 200%;
+                        @include screen-size(small) {
+                            right: initial;
+                            top: initial;
+                        }
+                    }
+                    // margin: 10px auto;
+                    transform: initial;
+
+                    @include screen-size(small) {
+                        position: relative;
+                        margin: 10px auto;
+                        z-index: 9;
+                        // display: block;
+                    }
+                }
+            }
+
+            .share_button {
+                background-color: rgb(80, 21, 219);
+                position: relative;
+                top: 0px;
+                cursor: pointer;
+                z-index: 99;
+                height: 60px;
+                width: 60px;
+                // padding: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100%;
+
+                h4 {
+                    color: white;
+                }
+
+            }
+            .shareIcons {
+                position: absolute;
+                top: 0px;
+                height: 100%;
+                width: 100%;
+                transition: top 0.6s;
+
+                .icon {
+                    // color: #fff;
+                    // background-color: #222;
+                    // border-radius: 100%;
+                    // padding: 20px;
+                    // height: 50px;
+                    // width: 50px;
+                    // display: flex;
+                    // flex-wrap: wrap;
+                    // align-items: center;
+                    // justify-content: center;
+                    position: absolute;
+                    top: 0px;
+                    right: 5px;
+                    // margin: 10px 0;
+                    padding: 0;
+                    transition: top 0.7s ease-in-out, padding 0.6s;
+                    cursor: pointer;
+
+                    .fab {
+                        height: initial;
+                        color: #fff;
+                        border-radius: 100%;
+                        height: 50px;
+                        width: 50px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .fa-facebook-f {
+                        background-color: #4267B2;
+                    }
+
+                    .fa-twitter {
+                        background-color: #00aced;
+                    }
+
+                    .fa-pinterest-p {
+                        background-color: #BD081C;
+                    }
+                }
+            }
+        }
+
+        .sortItems {
+            width: 50%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+            @include screen-size(small) {
+                width: 100%;
+            }
+
+            .item {
+                border: 1px solid #484848;
+                padding: 5px 10px;
+                width: 100px;
+                cursor: pointer;
+
+                &:nth-child(1) {
+                    border-right: initial;
+                }
+
+                &:nth-child(2) {
+                    border-right: initial;
+                }
+            }
+
+            .item.highlited {
+                background-color: #6d6d6d;
+                border: 1px solid #6d6d6d;
+
+                h4 {
+                    color: white;
+                }
+            }
+        }
+
+        .resolutions {
+            display: block;
+            width: 50%;
+            padding: 20px;
+            margin: auto;
+            transition: all 0.5s;
+            position: relative;
+            // border: 1px solid red;
+
+            @include screen-size(small) {
+                width: 100%;
+            }
+
+            .resolution_box {
+                // display: grid;
+                // grid-template-columns: 5fr 1fr;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+
+                .input {
+                    position: relative;
+                    border: 1px solid #bbbbbb;
+                    // box-shadow: 0px 3px 2px #a0a0a0;
+                    padding:50px 20px;
+                    cursor: pointer;
+                    min-width: 95%;
+                    height: 150px;
+                    text-align: left;
+
+                    @include screen-size(small) {
+                        padding: 20px;
+                        height: initial;
+                    }
+
+                    p {
+                        padding: 10px 30px;
+                        font-weight: 440;
+                        // font-size: 30px;
+
+                        @include screen-size(small) {
+                            padding: initial;
+                        }
+                    }
+
+                    input {
+                        margin-bottom: 0;
+                        border-bottom: initial;
+                        width: 100%;
+                        border-bottom: 1px solid #222;
+                        width: 80%;
+
+                        &:focus {
+                            box-shadow: initial;
+                        }
+                    }
+
+                    .close {
+                        position: absolute;
+                        top: -15px;
+                        right: -15px;
+                        background-color: #222;
+                        padding: 10px;
+                        color: white;
+                        height: 35px;
+                        width: 35px;
+                        display: flex;
+                        justify-content: center;
+                        align-self: center;
+
+                        @include screen-size(small) {
+                            height: 25px;
+                            width: 25px;
+                            padding: 8px;
+                            font-size: 10px;
+                        }
+                    }
+                    
+                    .close>.fa-times {
+                        transition: all 0.4s;
+                        transform: rotateY(180deg);
+                    }
+
+                    .close>.fa-pen {
+                        transition: all 0.4s;
+                        transform: rotateY(0deg);
+                    }
+
+                }
+
+                .icon {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 30px;
+                    cursor: pointer;
+                    font-size: 15px;
+                    position: absolute;
+                    right: -10px;
+                    color: #fff;
+                    background-color: #f12f1b;
+                    padding: 5px;
+                    max-width: 40px;
+                    transition: all 0.5s;
+
+                    @include screen-size(small) {
+                        top: 10px;
+                        left: 10px;
+                        right: initial;
+                        margin-left: initial;
+                        max-width: 30px;
+                        padding: 7px;
+                    }
+                }
+
+                .icon>.fa-unlock {
+                    transition: all 0.4s;
+                    transform: rotateY(180deg);
+                }
+
+                .icon>.fa-lock {
+                    transition: all 0.4s;
+                    transform: rotateY(0deg);
+                }
+
+                .icon>.fa-eye {
+                    transition: all 0.4s;
+                    transform: rotateY(180deg);
+                }
+
+                .icon>.fa-eye-slash {
+                    transition: all 0.4s;
+                    transform: rotateY(0deg);
+                }
+            }
+        }
+
+        .resolutions.editing {
+            // width: 60%;
+            // padding: initial;
+            // border: 1px solid #222222;
+            position: relative;
+            .input {
+                // width: 90%;
+                // border: initial;
+
+                p {
+                    // position: absolute;
+                    // opacity: 0;
+                    visibility: hidden;
+                }
+                
+                input {
+                    font-size: 18px;
+                    line-height: 23px;
+                    font-family: "Open Sans",
+                    sans-serif;
+                    color: #314455;
+                    font-weight: 400;
+                    padding-left: 20px;
+                    // text-align: center;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    margin: auto;
+
+                    @include screen-size(small) {
+                        font-size: 14px;
+                        padding-left: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    .addResolution {
+        background-color: #fff;
+        padding: 20px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        color: #3e3e3e;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin: auto;
+        margin: 50px auto;
+        border-radius: 100%;
+        border: 3px solid #3e3e3e;
+        transition: all 0.3s;
+    
+        &:hover {
+            background-color: #222;
+            color: #fff;
+        }
+    }
+}
