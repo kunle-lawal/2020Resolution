@@ -50,7 +50,7 @@ export class SignIn extends Component {
                         </button>
                     </div>
 
-                    <h4 className="red-text" style={{"fontWeight": 900}}>we will redirected you to this page</h4>
+                    <h4 className="red-text" style={{"fontWeight": 900}}>we will redirect you to this page</h4>
                 </div>
             </div>
         )
