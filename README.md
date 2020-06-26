@@ -1,4 +1,4 @@
-Link to app: https://2020resolve.com/
+Link to app: https://resolutionapp-be990.web.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
